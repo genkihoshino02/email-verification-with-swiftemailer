@@ -1,7 +1,7 @@
 <?php
 
-define("EMAIL","");
-define("PASSWORD","");
+define("EMAIL","techbase6.teamb@gmail.com");
+define("PASSWORD","techbase6teambbb");
 
 define("DB_HOST","localhost");
 define("DB_USER","genki5");

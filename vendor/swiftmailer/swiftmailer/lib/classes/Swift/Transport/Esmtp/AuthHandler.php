@@ -188,7 +188,7 @@ class Swift_Transport_Esmtp_AuthHandler implements Swift_Transport_EsmtpHandler
             foreach ($errors as $error) {
                 $message .= ' Authenticator '.$error[0].' returned '.$error[1].'.';
             }
-            throw new Swift_TransportException($message);
+              throw new Swift_TransportException($message);
         }
     }
 

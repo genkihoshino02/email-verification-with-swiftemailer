@@ -1,6 +1,8 @@
 <?php 
-    require_once 'vendor/autoload.php';
-    require_once 'config/constants.php';
+    require_once './vendor/autoload.php';
+    require_once './config/constants.php';
+    
+ 
     // Create the Transport
     $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465,'ssl'))
       ->setUsername(EMAIL)
@@ -8,10 +10,9 @@
     
     // Create the Mailer using your created Transport
     $mailer = new Swift_Mailer($transport);
-    
+    function sendVerificationEmail($userEmail,$token){ 
 
 
-    function sendVerificationEmail($userEmail,$token){
             global $mailer;
             $body='<!DOCTYPE html>
             <html lang="en">
@@ -40,10 +41,9 @@
         
         // Send the message
         $result = $mailer->send($message);
+        var_damp($result);
     }
 
-    function sendPassword(){
 
-    }
 ?>
 

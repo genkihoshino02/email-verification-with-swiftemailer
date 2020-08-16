@@ -59,6 +59,7 @@ if(isset($_POST["signup-btn"])){
 
            sendVerificationEmail($email,$token);
            
+           
            $_SESSION["message"]="you are now logged in!";
            $_SESSION["alert-class"]="alert-success";
            header('location: index.php');
@@ -67,7 +68,7 @@ if(isset($_POST["signup-btn"])){
            $errors["db_error"]="Database error: failed to register";
        }
     }
-
+   
 }
 
 if(isset($_POST["login-btn"])){
@@ -119,6 +120,7 @@ if(isset($_GET["logout"])){
     header("location: login.php");
     exit();
 }
+
 
 
 
